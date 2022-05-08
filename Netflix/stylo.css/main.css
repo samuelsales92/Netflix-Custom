@@ -295,4 +295,99 @@ main nav .idade {
       0 0 151px red;
 } 
 
+.img-list {
+max-width: 100%;
+max-height: 100%;
+list-style: none;
+padding-top: 20px;
+margin: 0;
+}
 
+.item2{
+    height: 500px;
+    width: 500px;
+}
+.img-list li {
+border: 5px solid transparent;
+box-sizing: border-box;
+width: 25%;
+float: left;
+position: relative;
+cursor: pointer;
+}
+.img-list img {
+max-width: 100%;
+vertical-align: middle;
+}
+
+/* Image Placeholder Styles
+-------------------------------------------------------------- 
+.img-placeholder:before,
+.img-placeholder:after {
+padding-top: 33.33%;
+content: "";
+display: block;
+}  
+.img-placeholder {
+background: #222;
+box-shadow: 0 0 0 8px #222 inset, 0 0 0 9px #333 inset;
+color: #444;
+line-height: 0;
+text-align: center;
+display: block;
+}
+*/
+
+/* The hover effect
+-------------------------------------------------------------- */
+.img-list li:before {
+transition: all .5s ease;
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: #333;
+transform: scale(0);
+}
+.img-list li:hover:before {
+opacity: .5;
+transform: scale(1);
+}
+.img-list li:after {
+transition: all .6s ease .2s;
+content: "";
+position:absolute;
+top: 8px;
+left: 8px;
+right: 8px;
+bottom: 8px;
+border: 1px solid #aaa;
+background: #000;
+opacity: 0;
+transform: scale(0);
+}
+.img-list li:hover:after {
+opacity: .35;
+transform: scale(1);
+}
+
+.img-list #teste {
+    color: transparent;
+    position: absolute;
+    top: 0px;
+    right: 145px;
+    font-size: 40px;
+    opacity: 0.65;
+}
+.img-list li:hover #teste {
+    position: absolute;
+    top: 210px;
+    right: 145px;
+    font-size: 40px;
+    color: black;
+    opacity: .80;
+    transition: 2s;
+    
+  }
